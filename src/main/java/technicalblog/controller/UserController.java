@@ -16,4 +16,8 @@ public class UserController {
         return "users/registration";
     }
 
+    @RequestMapping(value = "users/login", method=RequestMethod.POST)
+    public String loginUser(User user) {
+        return "redirect:/posts";
+    }
 }
