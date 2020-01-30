@@ -9,5 +9,11 @@
             <a href="users/registration.html" th:href="@{users/registration}">registration</a>
         </header>
     </header>
-</body>
-</html>
+
+    <header th:fragment="logged-in" th:remove="tag">
+        <header>
+            <form method="post" th:action="@{users/logout}">
+                <input type="submit" value="Logout"/>
+            </form>
+        </header>
+   
